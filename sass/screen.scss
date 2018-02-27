@@ -5,7 +5,7 @@
 
 @import "compass/reset";
 
-
+// TODO - cross browser compatibility and email/passoword validation
 
 $primary-color: #085382;
 $secondary-color: #434143;
@@ -17,12 +17,18 @@ $p-font-stack: "Lucida Grande", Helvetica;
 $primary-bdr-rds: 5px;
 
 @mixin themed-centered {
-
     display: grid;
     justify-content: center;
+    -webkit-justify-content: center;
     justify-items: center;
     text-align: center;
     margin: 16px;
+
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+
     h1,h2,h3,h4,h5,header {
         color: $primary-color;
         text-align: center;
@@ -58,6 +64,20 @@ $primary-bdr-rds: 5px;
     input {
         border: 1px solid $primary-color;
         border-radius: $primary-bdr-rds;
+          &:focus {
+            outline: none;
+            border: none;
+        }
+        &:active {
+            outline: none;
+            border: none;
+        }
+        transition: all 0.5s ease-in-out;
+    }
+    input[type="text"] {
+        &:focus {
+            box-shadow: 2px 2px 2px $primary-color;
+        }
     }
 
 }
@@ -96,6 +116,14 @@ form > * {
             opacity: 1;
         }
     }
+    &:focus {
+        background-color: $primary-color;
+        &:before {
+            opacity: 0;
+        }
+    }
+
+
 }
 
 @mixin btn-nrml ($size,$background) {
@@ -107,7 +135,12 @@ form > * {
     color:  white;
     font-family: $header-font-stack;
     font-size: $size * 1pt ;
+    // Use unquote to denote optional property
     background: unquote($background);
+    &:focus {
+        outline: none;
+        border: none;
+    }
 }
 @mixin frmgrd {
     display: grid;
@@ -170,7 +203,9 @@ form > * {
 .grdnt-btn {
     @include btn-nrml(12,"");
     @include gradient-animation($primary-color,$lgt-gry,90deg,0.5s);
-
+    &:focus {
+        background: $primary-color;
+    }
 }
 
 #lgnhdr {
