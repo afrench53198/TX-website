@@ -53,7 +53,7 @@ form > * {
     .container input:active {
       outline: none;
       border: none; }
-  .container input[type="text"]:focus {
+  .container input[type="text"]:focus, .container input[type="email"]:focus, .container input[type="password"]:focus {
     box-shadow: 2px 2px 2px #085382; }
 
 .grdnt-btn {
@@ -122,7 +122,7 @@ form > * {
   width: 70vw; }
   .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
     grid-column: 1/-1; }
-  .hmlgnfrm input[type="text"] {
+  .hmlgnfrm input[type="text"], .hmlgnfrm input[type="email"], .hmlgnfrm input[type="password"] {
     grid-column: 1/-1;
     width: 80%; }
   .hmlgnfrm label {
@@ -136,7 +136,7 @@ form > * {
     grid-column: 1/-1; }
   .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
     grid-column: 1/-1; }
-  .hmlgnfrm input[type="text"] {
+  .hmlgnfrm input[type="text"], .hmlgnfrm input[type="email"], .hmlgnfrm input[type="password"] {
     grid-column: 1/-1;
     width: 80%; }
   .hmlgnfrm label {
@@ -150,6 +150,11 @@ form > * {
     grid-column: 1/-1; }
   .hmlgnfrm img {
     grid-column: 1/-1; }
+  .hmlgnfrm input:invalid {
+    box-shadow: 0px 0px 10px #D0021B; }
+
+.error {
+  box-shadow: 0px 0px 10px #D0021B; }
 
 @media (max-width: 600px) {
   #lgnhdr {

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Brother sign up page</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+   
 </head>
+<script src="js/index.js"></script>
 <body id="brsgnup">
 <div class="container">
     <!--lgn means login. hdr means header-->
@@ -18,15 +20,16 @@
         <img id="logohdr" src="images/tx-unicorn.png">
         <h2>Brother Sign up</h2>
         <p>Already have an account? <a href="index.html">Sign in here</a></p>
-        <label for="eml" id="emlbl">Email or Username</label>
-        <input type="text" id="eml" name="eml-or-usrnme" placeholder="name@email.com"/>
-        <label for="usrnme" id="usrnmelbl">Username</label>
-        <input type="text" id="usrnme" name="usrnme" placeholder="brother32"/>
+        <label for="eml" id="emlbl">Email</label>
+        <input type="text" id="eml" name="eml" placeholder="name@email.com" required/>
         <label for="pswrd" id="pswrdlbl">Password</label>
-        <input type="text" id="pswrd" name="pswrd" placeholder="*********"/>
+        <input type="password" id="pswrd" name="pswrd" placeholder="*********"  type="password" required/>
+        <label for="pswrdcnfrm" id="pswrdcnfrmlbl">Confirm Password</label>
+        <input type="password" id="pswrdcnfrm" name="pswrdcnfrm" placeholder="*********"  type="password" required/>
         <!-- gradient button-->
-        <button class="grdnt-btn">Submit</button>
+        <button class="grdnt-btn" onclick="validateLgnForm()">Submit</button>
     </form>
 </div>
+
 </body>
 </html>

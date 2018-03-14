@@ -17,6 +17,5 @@
   },
   "homepage": "https://github.com/afrench53198/TX-website#readme",
   "dependencies": {
-    "node-sass": "^4.7.2"
   }
 }
