@@ -18,7 +18,7 @@ form > * {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   display: grid;
-  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form"; }
+  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form"; }
   .container h1, .container h2, .container h3, .container h4, .container h5, .container header {
     color: #085382;
     text-align: center;
@@ -39,12 +39,11 @@ form > * {
     margin: 8px;
     padding: 8px;
     color: #434143;
-    font-family: "Lucida Grande", Helvetica; }
+    font-family: Lucida, Helvetica; }
   .container label {
-    font-family: "Lucida Grande", Helvetica;
+    font-family: Lucida, Helvetica;
     color: #434143; }
   .container input {
-    border: 1px solid #085382;
     border-radius: 5px;
     transition: all 0.5s ease-in-out; }
     .container input:focus {
@@ -85,6 +84,8 @@ form > * {
     width: 100%;
     z-index: -100;
     transition: opacity 0.5s; }
+    .grdnt-btn:before:hover {
+      opacity: 1; }
   .grdnt-btn:hover:before {
     opacity: 1; }
   .grdnt-btn:focus {
@@ -130,8 +131,9 @@ form > * {
     text-align: left;
     width: 80%;
     margin-bottom: -8px; }
-  .hmlgnfrm button {
-    grid-column: 1/-1; }
+  .hmlgnfrm input[type="submit"] {
+    grid-column: 1/-1;
+    border: none; }
   .hmlgnfrm p {
     grid-column: 1/-1; }
   .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
@@ -144,17 +146,21 @@ form > * {
     text-align: left;
     width: 80%;
     margin-bottom: -8px; }
-  .hmlgnfrm button {
-    grid-column: 1/-1; }
+  .hmlgnfrm input[type="submit"] {
+    grid-column: 1/-1;
+    border: none; }
   .hmlgnfrm p {
     grid-column: 1/-1; }
   .hmlgnfrm img {
     grid-column: 1/-1; }
-  .hmlgnfrm input:invalid {
-    box-shadow: 0px 0px 10px #D0021B; }
-
-.error {
-  box-shadow: 0px 0px 10px #D0021B; }
+  .hmlgnfrm input {
+    border: 1px solid #085382; }
+    .hmlgnfrm input:invalid {
+      box-shadow: 0px 0px 10px #D0021B;
+      border: none; }
+  .hmlgnfrm .error {
+    box-shadow: 0px 0px 10px #D0021B;
+    border: none; }
 
 @media (max-width: 600px) {
   #lgnhdr {
