@@ -14,16 +14,21 @@ var FormValidator = function (form,emailField,passwordField) {
     this.validateForm = function() {
         // validate form using previous two functions and if valid send asychronous post request 
     }
-
 }
 
-function validateLgnForm () {
+ function validateForm () {
+    var form = document.querySelector("form");
+    var formData = new FormData(form);
+    console.log(formData.values);
     var pswrd = document.querySelector("#pswrd");
     var pswrdCnfrm = document.querySelector("#pswrdcnfrm");
     if (pswrdCnfrm) {
         var match = (pswrd.value == pswrdCnfrm.value);
         if (!match) {
-            window.alert("Your passwords must match!"); 
+            var pswrdLabel = document.querySelector("#pswrdlbl") 
         }
     }
 }
+
+
+
