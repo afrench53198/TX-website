@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Brother sign up page</title>
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <script src="js/index.js"></script>
 </head>
+
 <body id="brsgnup">
+
 <div class="container">
     <!--lgn means login. hdr means header-->
     <header id="lgnhdr">
@@ -14,18 +17,18 @@
     </header>
 
     <!--frm is form-->
-    <form class = "hmlgnfrm">
+    <form class = "hmlgnfrm" name="home-signup" action="#"> 
         <img id="logohdr" src="images/tx-unicorn.png">
-        <h2>Brother Sign up</h2>
+        <h3>Brother Sign up</h3>
         <p>Already have an account? <a href="index.html">Sign in here</a></p>
-        <label for="eml" id="emlbl">Email or Username</label>
-        <input type="text" id="eml" name="eml-or-usrnme" placeholder="name@email.com"/>
-        <label for="usrnme" id="usrnmelbl">Username</label>
-        <input type="text" id="usrnme" name="usrnme" placeholder="brother32"/>
-        <label for="pswrd" id="pswrdlbl">Password</label>
-        <input type="text" id="pswrd" name="pswrd" placeholder="*********"/>
+            <label for="eml" id="emlbl">Email</label>
+            <input type="email" id="eml" name="eml" placeholder="name@email.com" required/>
+            <label for="pswrd" id="pswrdlbl">Password</label>
+            <input type="password" id="pswrd" name="pswrd" placeholder="*********"  type="password" minlength="6"required/>
+            <label for="pswrdcnfrm" id="pswrdcnfrmlbl">Confirm Password</label>
+            <input type="password" id="pswrdcnfrm" name="pswrdcnfrm" placeholder="*********"  type="password" minlength="6" required/>
         <!-- gradient button-->
-        <button class="grdnt-btn">Submit</button>
+        <input type="submit" class="grdnt-btn" id="signup-btn" value="Submit">
     </form>
 </div>
 </body>

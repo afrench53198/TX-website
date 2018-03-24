@@ -2,134 +2,59 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 66, ../sass/screen.scss */
 form > * {
   margin: 8px;
-  padding: 8px;
-}
+  padding: 8px; }
 
-/* line 159, ../sass/screen.scss */
 .container {
   display: grid;
   justify-content: center;
+  -webkit-justify-content: center;
   justify-items: center;
   text-align: center;
   margin: 16px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   display: grid;
-  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form";
-}
-/* line 26, ../sass/screen.scss */
-.container h1, .container h2, .container h3, .container h4, .container h5, .container header {
-  color: #085382;
-  text-align: center;
-  font-family: "Marker Felt", Helvetica;
-  padding: 8px;
-}
-/* line 32, ../sass/screen.scss */
-.container h1 {
-  font-size: 40pt;
-  padding: 8pt;
-}
-/* line 36, ../sass/screen.scss */
-.container h2 {
-  font-size: 32pt;
-}
-/* line 39, ../sass/screen.scss */
-.container h3 {
-  font-size: 24pt;
-}
-/* line 42, ../sass/screen.scss */
-.container h4 {
-  font-size: 20pt;
-}
-/* line 45, ../sass/screen.scss */
-.container h5 {
-  font-size: 16pt;
-}
-/* line 48, ../sass/screen.scss */
-.container p {
-  margin: 8px;
-  padding: 8px;
-  color: #434143;
-  font-family: "Lucida Grande", Helvetica;
-}
-/* line 54, ../sass/screen.scss */
-.container label {
-  font-family: "Lucida Grande", Helvetica;
-  color: #434143;
-}
-/* line 58, ../sass/screen.scss */
-.container input {
-  border: 1px solid #085382;
-  border-radius: 5px;
-}
+  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form"; }
+  .container h1, .container h2, .container h3, .container h4, .container h5, .container header {
+    color: #085382;
+    text-align: center;
+    font-family: "Marker Felt", Helvetica;
+    padding: 8px; }
+  .container h1 {
+    font-size: 40pt;
+    padding: 8pt; }
+  .container h2 {
+    font-size: 32pt; }
+  .container h3 {
+    font-size: 24pt; }
+  .container h4 {
+    font-size: 20pt; }
+  .container h5 {
+    font-size: 16pt; }
+  .container p {
+    margin: 8px;
+    padding: 8px;
+    color: #434143;
+    font-family: Lucida, Helvetica; }
+  .container label {
+    font-family: Lucida, Helvetica;
+    color: #434143; }
+  .container input {
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out; }
+    .container input:focus {
+      outline: none;
+      border: none; }
+    .container input:active {
+      outline: none;
+      border: none; }
+  .container input[type="text"]:focus, .container input[type="email"]:focus, .container input[type="password"]:focus {
+    box-shadow: 2px 2px 2px #085382; }
 
-/* line 170, ../sass/screen.scss */
 .grdnt-btn {
   padding: 8px 32px;
   margin: 16px;
@@ -142,36 +67,39 @@ form > * {
   background-size: 100%;
   background-image: linear-gradient(90deg, #085382, #D2D2D4);
   position: relative;
-  z-index: 100;
-}
-/* line 81, ../sass/screen.scss */
-.grdnt-btn:before {
-  border-radius: inherit;
-  background-image: linear-gradient(90deg, #D2D2D4, #085382);
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  z-index: -100;
-  transition: opacity 0.5s;
-}
-/* line 95, ../sass/screen.scss */
-.grdnt-btn:hover:before {
-  opacity: 1;
-}
+  z-index: 100; }
+  .grdnt-btn:focus {
+    outline: none;
+    border: none; }
+  .grdnt-btn:before {
+    border-radius: inherit;
+    background-image: linear-gradient(90deg, #D2D2D4, #085382);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.5s; }
+    .grdnt-btn:before:hover {
+      opacity: 1; }
+  .grdnt-btn:hover:before {
+    opacity: 1; }
+  .grdnt-btn:focus {
+    background-color: #085382; }
+    .grdnt-btn:focus:before {
+      opacity: 0; }
+  .grdnt-btn:focus {
+    background: #085382; }
 
-/* line 176, ../sass/screen.scss */
 #lgnhdr {
   margin-bottom: 5vh;
   margin-top: 16px;
-  grid-area: header;
-}
+  grid-area: header; }
 
-/* line 182, ../sass/screen.scss */
 .hmlgnfrm {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -192,69 +120,50 @@ form > * {
   filter: drop-shadow(0px 0px 3px #434143);
   margin: 8px;
   padding: 8px;
-  width: 70vw;
-}
-/* line 119, ../sass/screen.scss */
-.hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
-  grid-column: 1/-1;
-}
-/* line 122, ../sass/screen.scss */
-.hmlgnfrm input[type="text"] {
-  grid-column: 1/-1;
-  width: 80%;
-}
-/* line 127, ../sass/screen.scss */
-.hmlgnfrm label {
-  grid-column: 1/-1;
-  text-align: left;
-  width: 80%;
-  margin-bottom: -8px;
-}
-/* line 134, ../sass/screen.scss */
-.hmlgnfrm button {
-  grid-column: 1/-1;
-}
-/* line 137, ../sass/screen.scss */
-.hmlgnfrm p {
-  grid-column: 1/-1;
-}
-/* line 119, ../sass/screen.scss */
-.hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
-  grid-column: 1/-1;
-}
-/* line 122, ../sass/screen.scss */
-.hmlgnfrm input[type="text"] {
-  grid-column: 1/-1;
-  width: 80%;
-}
-/* line 127, ../sass/screen.scss */
-.hmlgnfrm label {
-  grid-column: 1/-1;
-  text-align: left;
-  width: 80%;
-  margin-bottom: -8px;
-}
-/* line 134, ../sass/screen.scss */
-.hmlgnfrm button {
-  grid-column: 1/-1;
-}
-/* line 137, ../sass/screen.scss */
-.hmlgnfrm p {
-  grid-column: 1/-1;
-}
-/* line 152, ../sass/screen.scss */
-.hmlgnfrm img {
-  grid-column: 1/-1;
-}
+  width: 70vw; }
+  .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
+    grid-column: 1/-1; }
+  .hmlgnfrm input[type="text"], .hmlgnfrm input[type="email"], .hmlgnfrm input[type="password"] {
+    grid-column: 1/-1;
+    width: 80%; }
+  .hmlgnfrm label {
+    grid-column: 1/-1;
+    text-align: left;
+    width: 80%;
+    margin-bottom: -8px; }
+  .hmlgnfrm input[type="submit"] {
+    grid-column: 1/-1;
+    border: none; }
+  .hmlgnfrm p {
+    grid-column: 1/-1; }
+  .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
+    grid-column: 1/-1; }
+  .hmlgnfrm input[type="text"], .hmlgnfrm input[type="email"], .hmlgnfrm input[type="password"] {
+    grid-column: 1/-1;
+    width: 80%; }
+  .hmlgnfrm label {
+    grid-column: 1/-1;
+    text-align: left;
+    width: 80%;
+    margin-bottom: -8px; }
+  .hmlgnfrm input[type="submit"] {
+    grid-column: 1/-1;
+    border: none; }
+  .hmlgnfrm p {
+    grid-column: 1/-1; }
+  .hmlgnfrm img {
+    grid-column: 1/-1; }
+  .hmlgnfrm input {
+    border: 1px solid #085382; }
+    .hmlgnfrm input:invalid {
+      box-shadow: 0px 0px 10px #D0021B;
+      border: none; }
+  .hmlgnfrm .error {
+    box-shadow: 0px 0px 10px #D0021B;
+    border: none; }
 
 @media (max-width: 600px) {
-  /* line 189, ../sass/screen.scss */
   #lgnhdr {
-    font-size: 24pt;
-  }
-
-  /* line 193, ../sass/screen.scss */
+    font-size: 24pt; }
   .lgnfrm {
-    width: 90vw;
-  }
-}
+    width: 90vw; } }
