@@ -18,7 +18,7 @@ form > * {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   display: grid;
-  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form"; }
+  grid-template-areas: "   header header header   header" "   form    form  form     form  " "   form    form  form     form" "   form    form  form     form"; }
   .container h1, .container h2, .container h3, .container h4, .container h5, .container header {
     color: #085382;
     text-align: center;
@@ -39,9 +39,9 @@ form > * {
     margin: 8px;
     padding: 8px;
     color: #434143;
-    font-family: Lucida, Helvetica; }
+    font-family: "Lucida Grande", Helvetica; }
   .container label {
-    font-family: Lucida, Helvetica;
+    font-family: "Lucida Grande", Helvetica;
     color: #434143; }
   .container input {
     border-radius: 5px;
@@ -84,8 +84,6 @@ form > * {
     width: 100%;
     z-index: -100;
     transition: opacity 0.5s; }
-    .grdnt-btn:before:hover {
-      opacity: 1; }
   .grdnt-btn:hover:before {
     opacity: 1; }
   .grdnt-btn:focus {
@@ -102,13 +100,13 @@ form > * {
 
 .hmlgnfrm {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-content: center;
   justify-items: center;
   justify-content: center;
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-content: center;
   justify-items: center;
   justify-content: center;
@@ -136,6 +134,8 @@ form > * {
     border: none; }
   .hmlgnfrm p {
     grid-column: 1/-1; }
+  .hmlgnfrm .hlf {
+    grid-column: span 2; }
   .hmlgnfrm h1, .hmlgnfrm h2, .hmlgnfrm h3, .hmlgnfrm h4, .hmlgnfrm h5, .hmlgnfrm h6 {
     grid-column: 1/-1; }
   .hmlgnfrm input[type="text"], .hmlgnfrm input[type="email"], .hmlgnfrm input[type="password"] {
@@ -151,6 +151,8 @@ form > * {
     border: none; }
   .hmlgnfrm p {
     grid-column: 1/-1; }
+  .hmlgnfrm .hlf {
+    grid-column: span 2; }
   .hmlgnfrm img {
     grid-column: 1/-1; }
   .hmlgnfrm input {

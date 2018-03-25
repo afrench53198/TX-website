@@ -24,6 +24,7 @@ window.onload = function () {
             // if response = ok - sign in 
         }
     }
+    
 // Call functions
     submitButton.addEventListener("click",validateForm,false);
 }

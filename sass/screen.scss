@@ -143,12 +143,12 @@ form > * {
 }
 @mixin frmgrd {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-content: center;
     justify-items: center;
     justify-content: center;
     text-align: center;
-
+    
     h1,h2,h3,h4,h5,h6 {
         grid-column: 1/-1;
     }
@@ -157,7 +157,6 @@ form > * {
         grid-column: 1/-1;
         width: 80%
     }
-
     label {
         grid-column: 1/-1;
         text-align: left;
@@ -172,8 +171,11 @@ form > * {
     p {
         grid-column: 1/-1;
     }
+    .hlf {
+        grid-column: span 2; 
+    }
+    
 }
-
 
 @mixin lgnfrm {
     @include frmgrd();
