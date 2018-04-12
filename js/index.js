@@ -22,7 +22,9 @@ window.onload = function () {
             }
             // send ajax request to php file for server side validation 
             // if response = ok - sign in 
+            
         }
+        window.open("/homepage.html","_blank")
     }
     
 // Call functions
