@@ -7,91 +7,26 @@
 
 // TODO - cross browser compatibility and email/passoword validation
 
+// Colors 
 $primary-color: #085382;
 $secondary-color: #434143;
 $warning-color: #D0021B;
-$lgt-gry: #D2D2D4;
+$light-grey: #D2D2D4;
+$tx-gradient: linear-gradient($light-grey,$primary-color);
+// Typography 
 $header-font-stack: 'Marker Felt', Helvetica;
 $p-font-stack: 'Lucida Grande', Helvetica;
-
-$primary-bdr-rds: 5px;
-
-@mixin themed-centered {
-    display: grid;
-    justify-content: center;
-    -webkit-justify-content: center;
-    justify-items: center;
-    text-align: center;
-    margin: 16px;
-
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-
-    h1,h2,h3,h4,h5,header {
-        color: $primary-color;
-        text-align: center;
-        font-family: $header-font-stack;
-        padding: 8px;
-    }
-    h1 {
-        font-size: 40pt;
-        padding: 8pt;
-    }
-    h2 {
-        font-size: 32pt;
-    }
-    h3 {
-        font-size: 24pt;
-    }
-    h4 {
-        font-size: 20pt;
-    }
-    h5 {
-        font-size: 16pt;
-    }
-    p {
-        margin: 8px;
-        padding: 8px;
-        color: $secondary-color;
-        font-family: $p-font-stack;
-    }
-    label {
-        font-family: $p-font-stack;
-        color: $secondary-color;
-    }
-    input {
-        border-radius: $primary-bdr-rds;
-          &:focus {
-            outline: none;
-            border: none;
-        }
-        &:active {
-            outline: none;
-            border: none;
-        }
-        transition: all 0.5s ease-in-out;
-    }
-    input[type="text"], input[type="email"], input[type="password"] {
-        &:focus {
-            box-shadow: 2px 2px 2px $primary-color;
-        }
-    }
-
-}
-
-
-form > * {
-    margin: 8px;
-    padding: 8px;
-}
-
-// Gradient background
-@mixin grdnt-bkrd ($deg,$start,$end) {
-    background: linear-gradient($deg, $start, $end);
-}
-
+$light: 100;
+$regular: 400;
+$bold: 600;
+$h1: 40pt;
+$h2: 32pt;
+$h3: 24pt;
+$h4: 20pt;
+$h5: 16pt;
+// Visuals 
+$primary-border-radius: 5px;
+$padding: 8px;
 @mixin gradient-animation( $start, $end, $deg, $transTime ){
     background-size: 100%;
     background-image: linear-gradient($deg,$start, $end);
@@ -121,14 +56,123 @@ form > * {
             opacity: 0;
         }
     }
+}
+.themed-input {
+    padding: 8px;
+    border-radius: $primary-border-radius;
+    border: 1px solid $primary-color;
+    &:invalid {
+        box-shadow: 0px 0px 10px $warning-color;
+        border: none;
+    }
+    &:focus {
+        box-shadow: 2px 2px 2px $primary-color;
+    }
+    transition: all 0.3s ease-in-out;
+}
+.themed-label {
+    font-family: $p-font-stack;
+    color: $secondary-color;
+    margin-bottom: 8px;
+}
 
+.error {
+    box-shadow: 0px 0px 3px $warning-color;
+    border: none;
+}
 
+// Layouts 
+.grid-form-with-header {
+    display: grid;
+    grid-template-areas:
+        "   header header header   header"
+        "   form    form  form     form   "
+        "  form    form  form     form "
+        "  form    form  form     form "
+;
+}
+.grid-home {
+    grid-template-areas:
+        "   menu menu menu  menu"
+        "   content content content content   "
+        "   content content content content  "
+        "   footer footer footer footer  "
+;
+}
+// layout modules 
+.grid-form {
+    display: grid;
+    grid-area: form;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+// Layout Modifiers
+.full {
+    grid-column: 1/-1;
+}
+.center {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.form-content-half {
+    grid-column: span 2;
+    input {
+        width: 80%;
+    }
+    label {
+        width: 100%;
+    }
+}
+// Modules
+.form {
+    padding: $padding;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px $secondary-color;
+    input {
+        margin-bottom: 12px;
+    }
+}
+.header {
+    margin-bottom: 5vh;
+    margin-top: 16px;
+    grid-area: header;
+}
+
+// This mixin includes all the general styles for components; it sets the theme of our website 
+@mixin themed($primary-color,$secondary-color,$header-font-stack,$p-font-stack) {
+   h1,h2,h3,h4,h5,header {
+        color: $primary-color;
+        font-family: $header-font-stack;
+    }
+    h1 {
+        font-size: $h1;
+    }
+    h2 {
+        font-size: $h2;
+    }
+    h3 {
+        font-size: $h3;
+    }
+    h4 {
+        font-size: $h4;
+    }
+    h5 {
+        font-size: $h5;
+    }
+    p {
+        color: $secondary-color;
+        font-family: $p-font-stack;
+    }
+}
+body {
+    @include themed($primary-color, $secondary-color,$header-font-stack,$p-font-stack);
 }
 
 @mixin btn-nrml ($size,$background) {
     padding: 8px 32px;
     margin: 16px;
-    border-radius: $primary-bdr-rds;
+    border-radius: $primary-border-radius;
     cursor: pointer;
     border: none;
     color:  white;
@@ -141,96 +185,42 @@ form > * {
         border: none;
     }
 }
-@mixin frmgrd {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-content: center;
-    justify-items: center;
-    justify-content: center;
-    text-align: center;
-
-    h1,h2,h3,h4,h5,h6 {
-        grid-column: 1/-1;
-    }
-
-    input[type="text"], input[type="email"], input[type="password"]{
-        grid-column: 1/-1;
-        width: 80%
-    }
-
-    label {
-        grid-column: 1/-1;
-        text-align: left;
-        width: 80%;
-        margin-bottom: -8px;
-    }
-
-    input[type="submit"] {
-        grid-column: 1/-1;
-        border: none;
-    }
-    p {
-        grid-column: 1/-1;
-    }
-}
-
 
 @mixin lgnfrm {
-    @include frmgrd();
     grid-area: form;
-    text-align: center;
-    border-radius: $primary-bdr-rds;
+    border-radius: $primary-border-radius;
     background-color: white;
     filter: drop-shadow(0px 0px 3px $secondary-color); 
     margin: 8px;
     padding: 8px;
-    width: 70vw;
-    img {
-        grid-column: 1/-1;
-    }
-    input {
-        border: 1px solid $primary-color;
-        &:invalid {
-            box-shadow: 0px 0px 10px $warning-color;
-            border: none;
-        }
-    }
 }
 
-
 .container {
-    @include themed-centered();
     display: grid;
     grid-template-areas:
         "   header header header   header"
-        "   form    form  form     form  "
-        "   form    form  form     form"
-        "   form    form  form     form"
+        "   form    form  form     form   "
+        "  form    form  form     form "
+        "  form    form  form     form "
+    
 ;
 }
 
 .grdnt-btn {
     @include btn-nrml(12,"");
-    @include gradient-animation($primary-color,$lgt-gry,90deg,0.5s);
+    @include gradient-animation($primary-color,$light-grey,90deg,0.5s);
+    justify-self: center;
     &:focus {
         background: $primary-color;
     }
 }
 
-#lgnhdr {
-    margin-bottom: 5vh;
-    margin-top: 16px;
-    grid-area: header;
-}
+
+
 
 // See mixins frmgrd and lgnfrm for styles
 .hmlgnfrm {
-    @include frmgrd();
     @include lgnfrm();
-    .error {
-        box-shadow: 0px 0px 10px $warning-color;
-        border: none;
-    }
 }
 
 
@@ -244,3 +234,8 @@ form > * {
         width: 90vw;
     }
 }
+
+
+
+// The code above is legacy - will transition over to organized CSS below this comment 
+

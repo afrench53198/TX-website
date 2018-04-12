@@ -10,6 +10,7 @@ window.onload = function () {
 
 //Functions
     function validateForm (e) {
+        // Make form data object to send to server side 
         if (pswrdCnfrm) {
             var match = (pswrd.value == pswrdCnfrm.value);
             if (!match) {
@@ -19,8 +20,13 @@ window.onload = function () {
                 pswrd.classList.add("error");
                 e.preventDefault();
             }
+            // send ajax request to php file for server side validation 
+            // if response = ok - sign in 
+            
         }
+        window.open("/homepage.html","_blank")
     }
+    
 // Call functions
     submitButton.addEventListener("click",validateForm,false);
 }

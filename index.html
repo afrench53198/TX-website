@@ -7,21 +7,25 @@
     <script src="js/index.js"></script>
 </head>
 <body id="brlgn">
-    <div class="container">
-        <!--lgn means login. hdr means header-->
-        <h1 id="lgnhdr">Welcome To ASU chapter of Theta Xi!</h1>
+    <div class="grid-form-with-header">
+
+        <header class="header" >
+            <h1 class="full center">Brother Login</h1>
+        </header>
         <!--frm is form-->
-            <form class = "hmlgnfrm" name="home-login" action="#">
-                <img id="logohdr" src="images/tx-unicorn.png">
-                <h2>Brother Sign in</h2>
-                <p>Don't have an account? <a href="brother-sign-up.html">Sign up here</a></p>
-                <label for="eml" id="emlbl">Email</label>
-                <input type="email" id="eml" name="eml" placeholder="name@email.com"required/>
-                <label for="pswrd" id="pswrdlbl">Password</label>
-                <input type="password" id="pswrd" name="pswrd" placeholder="*********" required/>
+            <form class = "grid-form sign-in-form" name="home-signup" >  
+                <img class="full center"id="logohdr" src="images/tx-unicorn.png">
+                <!--Fields for role number and academic tier-->
+                <h3 class="full center">Brother Sign up</h3>
+                <p class="full center">Don't have an account? <a href="brother-sign-up.html">Sign up here</a></p>
+                    <label for="eml"  class="full themed-label"id="emlbl">Email</label>
+                    <input type="email" class="full themed-input" id="eml" name="eml" placeholder="name@email.com" required/>
+                    <label for="pswrd"  class="full themed-label" id="pswrdlbl">Password</label>
+                    <input type="password"  class="full themed-input" id="pswrd" name="pswrd" placeholder="*********"  type="password" minlength="6"required/>
                 <!-- gradient button-->
-                <input type="submit" class="grdnt-btn" id="login-btn" value="Submit">
+                <input type="submit" class="grdnt-btn full" id="signup-btn" value="Submit">
             </form>
+        </div>
     </div>
 </body>
 </html>

@@ -9,27 +9,45 @@
 
 <body id="brsgnup">
 
-<div class="container">
-    <!--lgn means login. hdr means header-->
-    <header id="lgnhdr">
-        <h1 >Sign Up</h1>
-        <p>We think you'll like it here</p>
+<div class="grid-form-with-header">
+
+    <header class="header">
+        <h1 class="full center">Sign Up</h1>
+        <p class="full center">We think you'll like it here</p>
     </header>
 
     <!--frm is form-->
-    <form class = "hmlgnfrm" name="home-signup" action="#"> 
-        <img id="logohdr" src="images/tx-unicorn.png">
-        <h3>Brother Sign up</h3>
-        <p>Already have an account? <a href="index.html">Sign in here</a></p>
-            <label for="eml" id="emlbl">Email</label>
-            <input type="email" id="eml" name="eml" placeholder="name@email.com" required/>
-            <label for="pswrd" id="pswrdlbl">Password</label>
-            <input type="password" id="pswrd" name="pswrd" placeholder="*********"  type="password" minlength="6"required/>
-            <label for="pswrdcnfrm" id="pswrdcnfrmlbl">Confirm Password</label>
-            <input type="password" id="pswrdcnfrm" name="pswrdcnfrm" placeholder="*********"  type="password" minlength="6" required/>
-        <!-- gradient button-->
-        <input type="submit" class="grdnt-btn" id="signup-btn" value="Submit">
-    </form>
+        <form class = "grid-form sign-in-form" name="home-signup" action="#">  
+            <img class="full center"id="logohdr" src="images/tx-unicorn.png">
+            <!--Fields for role number and academic tier-->
+            <h3 class="full center">Brother Sign up</h3>
+            <p class="full center">Already have an account? <a href="index.html">Sign in here</a></p>
+            <div class="form-content-half">
+                <label for="frstnme" class="full themed-label" id="frstnmelbl" >First Name</label>
+                <input type="text"  class="full themed-input" id="frstnme" name="frstnme" placeholder="Firstname" required/>
+            </div>
+            <div class="form-content form-content-half">
+                <label for="lstnme"  class="full themed-label" id="lstnmelbl">Last Name</label>
+                <input type="text"  class="full themed-input"id="lstnme" name="lstnme" placeholder="Lastname" required/>
+            </div>
+            <div class="form-content-half">
+                <label for="role-number"  class="full themed-label"id="role-number-label">Role Number</label>
+                <input type="number" class="full themed-input" id="role-number" name="role-number" placeholder="00" required/>
+            </div>
+            <div class="form-content-half">
+                <label for="gpa"  class="full themed-label"id="gpa-label">Last Semester's GPA</label>
+                <input type="number" class="full themed-input" id="gpa" name="gpa" placeholder="4.0" required/>
+            </div>
+                <label for="eml"  class="full themed-label"id="emlbl">Email</label>
+                <input type="email" class="full themed-input" id="eml" name="eml" placeholder="name@email.com" required/>
+                <label for="pswrd"  class="full themed-label" id="pswrdlbl">Password</label>
+                <input type="password"  class="full themed-input" id="pswrd" name="pswrd" placeholder="*********"  type="password" minlength="6"required/>
+                <label for="pswrdcnfrm"  class="full themed-label"id="pswrdcnfrmlbl">Confirm Password</label>
+                <input type="password"  class="full themed-input"id="pswrdcnfrm" name="pswrdcnfrm" placeholder="*********"  type="password" minlength="6" required/> 
+            <!-- gradient button-->
+            <input type="submit" class="grdnt-btn full" id="signup-btn" value="Submit">
+        </form>
+    </div>
 </div>
 </body>
 </html>
